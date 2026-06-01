@@ -1,0 +1,36 @@
+/* normalizing css on my own 
+reference to https://github.com/necolas/normalize.css/blob/master/normalize.css */
+html {
+    line-height: 1.15;
+}
+
+body {
+    margin: 0;
+}
+
+.img-section {
+    background: url("img/Watch-Free-Hero-2048x1152-1.webp");
+    width: 30vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right 30% bottom 50%; /* to learn */
+}
+
+img[src="img/odin-lined.png"] {
+    height: 2rem;
+}
+
+.logo-div {
+    position: absolute;
+    width: 30vw;
+    background: black;
+    opacity: 0.6;
+    color: white;
+    top: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
