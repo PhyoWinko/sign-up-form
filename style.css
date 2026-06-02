@@ -1,14 +1,23 @@
 /* normalizing css on my own 
 reference to https://github.com/necolas/normalize.css/blob/master/normalize.css */
+@font-face {
+    font-family: 'my-odin-movie-logo-font';
+    src: url(fonts/SevenArts.woff2) format("woff2");
+    font-display: swap;
+}
+
 html {
     line-height: 1.15;
 }
 
 body {
     margin: 0;
+    display: flex;
 }
 
-.img-section {
+.img-container {
+    position: relative;
+    flex-shrink: 0;
     background: url("img/Watch-Free-Hero-2048x1152-1.webp");
     width: 30vw;
     height: 100vh;
@@ -33,4 +42,18 @@ img[src="img/odin-lined.png"] {
     align-items: center;
     gap: 0.5em;
 }
+
+.content-container {
+    background: linear-gradient(147deg, #4B4E53 0%, #000000 74%); /* code copied from gradient website */
+    flex-grow: 1; /* fill up flex grow */
+    width: 70vw;
+}
+
+.text-section > p {
+    font-family: my-odin-movie-logo-font;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+}
+
 
