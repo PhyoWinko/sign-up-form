@@ -1,13 +1,27 @@
 /* normalizing css on my own 
 reference to https://github.com/necolas/normalize.css/blob/master/normalize.css */
+
+/* 1. Use a more-intuitive box-sizing model */
+/* css reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+}
+
 @font-face {
     font-family: 'my-odin-movie-logo-font';
     src: url(fonts/SevenArts.woff2) format("woff2");
     font-display: swap;
 }
 
-html {
-    line-height: 1.15;
+@font-face {
+    font-family: 'odin-movie-form-hand-writting';
+    src: url(fonts/BrittanySignatureRegular.woff2) format("woff2");
+    font-display: swap;
+
 }
 
 body {
@@ -16,14 +30,13 @@ body {
 }
 
 .img-container {
-    position: relative;
-    flex-shrink: 0;
     background: url("img/Watch-Free-Hero-2048x1152-1.webp");
     width: 30vw;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right 30% bottom 50%; /* to learn */
+    flex: auto;
 }
 
 img[src="img/odin-lined.png"] {
@@ -45,15 +58,35 @@ img[src="img/odin-lined.png"] {
 
 .content-container {
     background: linear-gradient(147deg, #4B4E53 0%, #000000 74%); /* code copied from gradient website */
-    flex-grow: 1; /* fill up flex grow */
     width: 70vw;
+    height: 100vh;
+    padding: 2em;
+    flex: auto;
 }
 
-.text-section > p {
+.introduction-text > p:first-child {
     font-family: my-odin-movie-logo-font;
     font-size: 2.5rem;
     color: white;
+    margin: 0;
     text-align: center;
 }
 
+.introduction-text > p + p {
+    color: #e3e3e3;
+    margin: 1em auto;
+    font-size: 1rem;
+}
 
+form {
+    color: white;
+    border: 0.5px solid lightyellow;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+form > p:first-child ~ p {
+    width: 10em;
+    display: inline-block;
+    font: 'odin-movie-form-hand-writting'
+}
