@@ -86,7 +86,28 @@ form {
 }
 
 form > p:first-child ~ p {
-    width: 10em;
+    max-width: 10em;
     display: inline-block;
     font: 'odin-movie-form-hand-writting'
 }
+
+form > p:first-child ~ p:nth-child(odd) { /* css count all tag inside so it makes odd instead of even */
+    margin-left: 3em;
+}
+
+button {
+    margin-top: 1em;
+    padding: 0.5em;
+    border: 2px solid lightyellow;
+    border-radius: 0.7em;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    transform: rotate(-1.5deg);
+}
+
+button:after {
+    content: ".";
+    font-family: 'my-odin-movie-logo-font';
+}
+
