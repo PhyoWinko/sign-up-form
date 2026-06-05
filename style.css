@@ -19,7 +19,7 @@ html {
 
 @font-face {
     font-family: 'odin-movie-form-hand-writting';
-    src: url(fonts/BrittanySignatureRegular.woff2) format("woff2");
+    src: url(fonts/StudyDaily.woff2) format("woff2");
     font-display: swap;
 
 }
@@ -65,8 +65,7 @@ img[src="img/odin-lined.png"] {
 }
 
 .introduction-text > p:first-child {
-    font-family: my-odin-movie-logo-font;
-    font-size: 2.5rem;
+    font: 2.5rem "my-odin-movie-logo-font";
     color: white;
     margin: 0;
     text-align: center;
@@ -88,11 +87,14 @@ form {
 form > p:first-child ~ p {
     max-width: 10em;
     display: inline-block;
-    font: 'odin-movie-form-hand-writting'
 }
 
 form > p:first-child ~ p:nth-child(odd) { /* css count all tag inside so it makes odd instead of even */
     margin-left: 3em;
+}
+
+form input {
+    font-family: "odin-movie-form-hand-writting";
 }
 
 button {
@@ -106,8 +108,17 @@ button {
     transform: rotate(-1.5deg);
 }
 
+button:focus, button:hover {
+    color: black;
+    background: gold;
+}
+
 button:after {
     content: ".";
     font-family: 'my-odin-movie-logo-font';
+}
+
+.account-log-in {
+    color: white;
 }
 
