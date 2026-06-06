@@ -18,6 +18,12 @@ html {
 }
 
 @font-face {
+    font-family: "odin-logo";
+    src: url(fonts/Minya-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'odin-movie-form-hand-writting';
     src: url(fonts/StudyDaily.woff2) format("woff2");
     font-display: swap;
@@ -44,6 +50,7 @@ img[src="img/odin-lined.png"] {
 }
 
 .logo-div {
+    font-family: "odin-logo";
     position: absolute;
     width: 30vw;
     background: black;
@@ -84,9 +91,27 @@ form {
     padding: 1em;
 }
 
+/* same meaning with below
 form > p:first-child ~ p {
+} */
+form > p:nth-child(n+2) {
     max-width: 10em;
     display: inline-block;
+}
+
+form input:nth-child(n+2):user-invalid + span:before{
+    content: "✖";
+    color: red;
+}
+
+form input:nth-child(n+2):user-valid + span:before{
+    content: "✓";
+    color: green;
+}
+
+form input:nth-child(n+2):invalid + span:after{
+    content: "required";
+    color: white;
 }
 
 form > p:first-child ~ p:nth-child(odd) { /* css count all tag inside so it makes odd instead of even */
@@ -95,6 +120,7 @@ form > p:first-child ~ p:nth-child(odd) { /* css count all tag inside so it make
 
 form input {
     font-family: "odin-movie-form-hand-writting";
+    font-weight: 100;
 }
 
 button {
@@ -121,11 +147,14 @@ button:after {
 .account-log-in {
     color: white;
 }
+a {
+    color: gold;
+}
 
-input:invalid {
-    border: 1px solid red;
+input:user-invalid {
+    border-color: red;
 }
 
 input:valid {
-    border: 1px solid green;
+    border-color: green;
 }
