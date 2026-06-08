@@ -111,7 +111,7 @@ form input:nth-child(n+2):user-valid + span:before{
 
 form input:nth-child(n+2):invalid + span:after{
     content: "required";
-    color: white;
+    color: "#C04000";
 }
 
 form > p:first-child ~ p:nth-child(odd) { /* css count all tag inside so it makes odd instead of even */
