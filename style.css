@@ -46,17 +46,17 @@ body {
 }
 
 img[src="img/odin-lined.png"] {
-    height: 2rem;
+    height: 5rem;
 }
 
 .logo-div {
-    font-family: "odin-logo";
+    font: 2.5rem "odin-logo";
     position: absolute;
     width: 30vw;
     background: black;
     opacity: 0.6;
     color: white;
-    top: 3.5em;
+    top: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
