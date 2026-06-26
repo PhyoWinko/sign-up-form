@@ -37,6 +37,15 @@ body {
     display: flex;
 }
 
+@media(max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .img-container {
+        flex: 1 1 auto;
+    }
+}
+
 .img-container {
     background: url("img/Watch-Free-Hero-2048x1152-1.webp");
     width: 30vw;
